@@ -1,9 +1,9 @@
 import express from "express";
 import { Telegraf } from "telegraf";
 import dotEnv from "dotenv";
-import { randomCorintiano } from "./commands/corintiano";
-import { randomCat } from "./commands/cat";
-import { randomPapoco } from "./commands/papoco";
+import { randomCorintiano } from "./commands/corintiano.js";
+import { randomCat } from "./commands/cat.js";
+import { randomPapoco } from "./commands/papoco.js";
 
 dotEnv.config();
 

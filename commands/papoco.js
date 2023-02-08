@@ -1,4 +1,4 @@
-import { wait } from "../utils/wait";
+import { wait } from "../utils/wait.js";
 
 export const randomPapoco = async (ctx) => {
     const messagesNumber = Math.floor(Math.random() * 5) + 1;
