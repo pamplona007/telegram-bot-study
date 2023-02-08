@@ -4,6 +4,7 @@ import dotEnv from "dotenv";
 import { randomCorintiano } from "./commands/corintiano.js";
 import { randomCat } from "./commands/cat.js";
 import { randomPapoco } from "./commands/papoco.js";
+import { randomDog } from "./commands/dog.js";
 
 dotEnv.config();
 
@@ -18,6 +19,7 @@ bot.start((ctx) => ctx.reply('Welcome'));
 bot.command('acende', randomPapoco);
 bot.command('corintiano', randomCorintiano);
 bot.command('cat', randomCat);
+bot.command('dog', randomDog);
 
 bot.launch();
 
