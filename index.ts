@@ -5,10 +5,9 @@ import { randomCorintiano } from "./commands/corintiano.js";
 import { randomCat } from "./commands/cat.js";
 import { randomPapoco } from "./commands/papoco.js";
 import { randomDog } from "./commands/dog.js";
-
+import { waifu } from "./commands/waifu.js";
 
 dotEnv.config();
-
 
 const init = async () => {
     if (!process.env.TELEGRAM_TOKEN) {
@@ -31,6 +30,7 @@ const init = async () => {
     bot.command('corintiano', randomCorintiano);
     bot.command('cat', randomCat);
     bot.command('dog', randomDog);
+    bot.command('waifu', waifu);
 
     bot.launch();
 
