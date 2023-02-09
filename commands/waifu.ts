@@ -6,8 +6,6 @@ export const waifu: Middleware<NarrowedContext<Context<Update>, {
     message: Update.New & Update.NonChannel & Message.TextMessage;
     update_id: number;
 }>> = async (ctx) => {
-    // get random waifu from ttps://api.waifu.pics/sfw/waifu
-    // if the user sends the nsft tag, send a nsfw waifu
     const [command, ...args] = ctx.update.message.text.split(" ");
 
     if (args.length > 0 && args[0] === "nsfw") {
