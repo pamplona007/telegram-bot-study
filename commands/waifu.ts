@@ -12,12 +12,12 @@ export const waifu: Middleware<NarrowedContext<Context<Update>, {
 
     if (args.length > 0 && args[0] === "nsfw") {
         const { data: { url } } = await axios.get("https://api.waifu.pics/nsfw/waifu");
-        ctx.replyWithPhoto(url, {
+        ctx.sendPhoto(url, {
             has_spoiler: true,
         });
         return;
     }
 
     const { data: { url } } = await axios.get("https://api.waifu.pics/sfw/waifu");
-    ctx.replyWithPhoto(url);
+    ctx.sendPhoto(url);
 }
