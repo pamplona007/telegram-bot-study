@@ -31,6 +31,7 @@ const init = async () => {
     bot.command('cat', randomCat);
     bot.command('dog', randomDog);
     bot.command('taylor', randomTaylorSticker);
+    bot.command('ordinal', (ctx) => ctx.reply('°'));
 
     bot.launch();
 
