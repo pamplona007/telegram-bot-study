@@ -8,7 +8,7 @@ export const randomPapoco: CommandFunction = async (ctx) => {
 
     for (let i = 0; i < messagesNumber; i++) {
         const papocoNumber = Math.floor(Math.random() * 15);
-        await wait(Math.floor(Math.random() * 1000));
+        await wait(Math.floor(Math.random() * 500) + 500);
         ctx.reply(('Pa ' + 'pa '.repeat(papocoNumber)).trim());
     }
 
