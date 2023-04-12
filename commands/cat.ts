@@ -2,7 +2,11 @@ import axios from "axios";
 import { Context } from "telegraf";
 
 export const randomCat = async (ctx: Context) => {
-    const { data } = await axios.get('https://aws.random.cat/meow');
+    const { data } = await axios.get('https://api.thecatapi.com/v1/images/search?size=full', {
+        headers: {
+            'x-api-key': process.env.CAT_API_KEY
+        }
+    });
 
-    await ctx.sendPhoto(data.file);
+    await ctx.replyWithPhoto(data[0].url);
 };
