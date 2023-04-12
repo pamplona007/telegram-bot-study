@@ -6,6 +6,7 @@ import { randomCat } from "./commands/cat.js";
 import { randomPapoco } from "./commands/papoco.js";
 import { randomDog } from "./commands/dog.js";
 import { randomTaylorSticker } from "./commands/taylor.js";
+import { randomImage } from "./commands/image.js";
 
 dotEnv.config();
 
@@ -32,6 +33,7 @@ const init = async () => {
     bot.command('dog', randomDog);
     bot.command('taylor', randomTaylorSticker);
     bot.command('ordinal', (ctx) => ctx.reply('°'));
+    bot.command('image', randomImage);
 
     bot.launch();
 

@@ -1,8 +1,10 @@
-import { Context } from "telegraf";
+import { CommandFunction } from "../types/index.js";
 import { wait } from "../utils/wait.js";
 
-export const randomPapoco = async (ctx: Context) => {
-    const messagesNumber = Math.floor(Math.random() * 5) + 1;
+export const randomPapoco: CommandFunction = async (ctx) => {
+    const count = Number(ctx.message?.text?.split(' ')[1]);
+
+    const messagesNumber = count || Math.floor(Math.random() * 5) + 1;
 
     for (let i = 0; i < messagesNumber; i++) {
         const papocoNumber = Math.floor(Math.random() * 15);
